@@ -20,8 +20,7 @@ class App extends Component {
       trainerRecord: '',
       trainerName: '',
       isHidden: false,
-      optionValue: '',
-      optionMessage: '',
+
       // add on a pre-loaded for user experience
       // isLoading: false,
     };
@@ -32,7 +31,6 @@ class App extends Component {
     this.setState ({
       trainerRecord: event.currentTarget.value,
     });
-    // console.log(this.state.optionValue);
   };
   // on click submit... log the user's input text so we can call for it later in main.js
   handleClick = event => {
@@ -40,13 +38,6 @@ class App extends Component {
     this.setState ({
       trainerName: this.state.trainerRecord,
       isHidden: true,
-    });
-  };
-
-  // on select option... log the user's option so we can call for it later in main.js
-  handleSelect = event => {
-    this.setState({
-      optionValue: event.currentTarget.value,
     });
   };
 
@@ -90,23 +81,22 @@ class App extends Component {
       <div className="App">
 
         {/* IF the state isHidden is true... HIDE the HEADER after the handleClick event. */}
-        {this.state.isHidden ? null : (
-          <Header 
+        {this.state.isHidden ? null : 
+        (<Header 
           onChange={this.handleChange} 
           onClick={this.handleClick} />
         )}
 
         {/* IF the state isHidden is false... UNHIDE the MAIN after the handleClick event */}
         {this.state.isHidden ?         
-          <Main
-          name={this.state.pokemon}
+          (<Main
+          pokeName={this.state.pokemon}
           sprite={this.state.sprite}
           spriteTwo={this.state.spriteTwo}
           trainerName={this.state.trainerName}
           onChange={this.handleSelect}
-          optionValue={this.state.optionValue}
-          /> : null
-          }
+          />) : null
+        }
         <Footer />
       </div>
     );

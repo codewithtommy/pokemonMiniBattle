@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import pokemonLogo from "./pokemonLogo.png";
 
 class Header extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     isHidden: false,
-  //   };
-  // }
-
   // what to render?
   render() {
     // return
@@ -17,22 +10,22 @@ class Header extends Component {
         <div className="wrapper hero">
           <div className="pokeTitle">
             <div className="pokeLogoContainer">
-              <img 
-              src={pokemonLogo} 
-              alt="Pokemon Main Logo" />
+              <img src={pokemonLogo} alt="Pokemon Main Logo" />
             </div>
             <div className="pokeSubmit">
               <input
                 type="text"
                 className="name"
-                placeholder="Your Trainer Name!"
+                maxLength="12"
                 onChange={this.props.onChange}
+                placeholder="Your Trainer Name!"
                 required
               />
-              <button 
-              className="nameSubmit" 
-              onClick={this.props.onClick}
-              required>
+              <button
+                className="nameSubmit"
+                onClick={this.props.onClick}
+                required
+              >
                 Go!
               </button>
             </div>

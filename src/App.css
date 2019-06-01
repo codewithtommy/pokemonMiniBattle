@@ -118,11 +118,14 @@ p {
   display: flex;
 }
 
-.pokeName,
 .pokeImg,
-.trainerName,
 .trainerImg {
   width: 50%;
+}
+
+.pokeName,
+.trainerName {
+  width: 80%;
 }
 
 .pokeImg {
@@ -137,6 +140,15 @@ select,
 
 select {
   text-align: center;
+}
+
+.messageDisplay p {
+  padding: 7.5% 0% 0%;
+  text-align: center;
+}
+
+.buttonDisplay {
+  text-align: right;
 }
 
 /* .spritesContainer {
