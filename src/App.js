@@ -18,8 +18,9 @@ class App extends Component {
       spriteTwo: [],
       trainerRecord: '',
       trainerName: '',
-      isHidden: false,
-
+      isHeaderHidden: false,
+      isMainHidden: true,
+      randomLevel: 1,
       // add on a pre-loaded for user experience
       // isLoading: true,
     };
@@ -33,11 +34,12 @@ class App extends Component {
   };
 
   // on click submit... log the user's input text so we can call for it later in main.js and also hide the header so the main page can show up.
-  handleClick = event => {
+  handleSubmit = event => {
     event.preventDefault();
     this.setState ({
       trainerName: this.state.trainerRecord,
-      isHidden: true,
+      isHeaderHidden: true,
+      isMainHidden: false,
     });
   };
 
@@ -45,6 +47,9 @@ class App extends Component {
   componentDidMount() {
     // variable randomNumber is created to generate a number from 0-150 (0 is bulbasaur & mew is 150 because of index numbering)
     const randomNumber = Math.floor(Math.random() * 150);
+
+    // variable level for generating a random level from 0-55.
+    const level = Math.floor(Math.random() * 55);
 
     // variable newURL is created so the randomNumber can be concat'd with the original URL... this is to pull a random pokemon along with all the info needed in one call.
     const newURL = `https://pokeapi.co/api/v2/pokemon/` + randomNumber;
@@ -69,7 +74,7 @@ class App extends Component {
         sprite: pokemonSprite,
         // spriteTwo: is a tester sprite which will be the user's sprite
         spriteTwo: pokemonSpriteTest,
-        // isLoading: false,
+        randomLevel: level,
       });
     });
   }
@@ -78,21 +83,22 @@ class App extends Component {
     return (
       <div className="App">
         {/* IF the state isHidden is true... HIDE the HEADER after the handleClick event. */}
-        {this.state.isHidden ? null : 
-        (<Header 
-          onChange={this.handleChange} 
-          onClick={this.handleClick} />
-        )}
+        {this.state.isHeaderHidden ? null : 
+          (<Header 
+            onChange={this.handleChange} 
+            onSubmit={this.handleSubmit} />
+          )}
 
         {/* IF the state isHidden is false... UNHIDE the MAIN after the handleClick event */}
-        {this.state.isHidden ?         
+        {this.state.isMainHidden ? null :
           (<Main
           pokeName={this.state.pokemon}
           sprite={this.state.sprite}
           spriteTwo={this.state.spriteTwo}
           trainerName={this.state.trainerName}
           onChange={this.handleSelect}
-          />) : null
+          randomLevel={this.state.randomLevel}
+          />)
         }
         <Footer />
       </div>

@@ -1,4 +1,4 @@
-
+/* 
 .appLogo {
   animation: appLogoSpin infinite 20s linear;
   height: 100vmin;
@@ -12,8 +12,7 @@
   to {
     transform: rotate(360deg);
   }
-}
-
+} */
 
 /* ================================================= */
 /* SETUP */
@@ -30,31 +29,49 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 /* GENERAL: Styling | START */
 /* ================================================= */
 
-/* font-family: 'Press Start 2P', cursive; */
-/* font-family: 'Open Sans', sans-serif; */
-
 html {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 125%;
 	scroll-behavior: smooth;
 }
 
-/* * {
-  border: 1px solid red;
-} */
+h3, 
+p {
+  font-size: .8rem;
+  margin: 0%;
+}
+
+h3 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+a {
+  color: #FFCB05;
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px 1px #000000;
+}
+
+a:hover {
+  color: #3A5CA8;
+  text-decoration: underline;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+}
+
 
 img {
 	display: block;
 	height: auto;
 	max-width: 100%;
 	width: 100%;
-}
-
-button {
-  font-family: 'Press Start 2P', cursive;
-  font-size: .7rem;
-  text-transform: uppercase;
-  transition: all ease-in-out .5s;
 }
 
 input {
@@ -65,10 +82,17 @@ select {
   text-align: center;
 }
 
-i {
+i,
+button {
   transition: all ease-in-out .5s;
 }
 
+button,
+select {
+  font-size: .7rem;
+}
+
+/* .uppercase + .lowercase are span classes. */
 .uppercase {
   text-transform: uppercase;
 }
@@ -85,37 +109,56 @@ i {
 	width: 100%;
 }
 
-h3 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: .8rem;
-  margin: 0%;
-  padding: 20% 0% 0% 10%;
-  text-transform: uppercase;
+/* ================================================= */
+/* HEADER + MAIN + FOOTER: Similary Styling | START (For more DRYness) */
+/* ================================================= */
+.pokeHero,
+.pokeBattle,
+.pokeCredits {
+  background: #FAFAFA;
 }
 
-p {
-  font-size: .8rem;
-  margin: 0%;
+.pokeHero,
+.pokeBattle,
+.pokeTitle,
+.pokeSubmit,
+.trainerName,
+.sprites.top,
+.sprites.bottom {
+  display: flex;
+}
+
+.messageBorder,
+.message.one,
+.message.two {
+  background-color: #285068;
 }
 
 /* ================================================= */
 /* HEADER: Styling | START (Pokemon Main Logo/ PokeBall logo/ Submit Button) */
 /* ================================================= */
 .pokeHero {
-  background: #FAFAFA;
-  display: flex;
   height: 100vh;
 }
 
+.pokeTitle {
+  align-items: center;
+  flex-direction: column;
+}
+
+.pokeLogoContainer {
+  width: 75%;
+}
+
 .pokeSubmit {
-  display: flex;
   justify-content: center;
+  margin-top: 5%;
 }
 
 .nameSubmit {
-  background-color: #FFCA05;
+  background-color: #FFCB05;
   border: transparent;
-  padding: 0% 4%;
+  padding: 0% 7.5%;
 }
 
 .nameSubmit i {
@@ -123,24 +166,14 @@ p {
 }
 
 .nameSubmit:hover {
-  color: #FFCA05;
-  background-color: #3467B0;
+  color: #FFCB05;
+  background-color: #3A5CA8;
   transition: all ease-in-out .5s;
 }
-
 
 /* ================================================= */
 /* MAIN: Styling | START (Pokemon Trainer/ Sprite/ Player Options) */
 /* ================================================= */
-.pokeBattle {
-  background: #FAFAFA;
-}
-
-.wrapper.battle {
-  display: flex;
-  flex-direction: column;
-}
-
 .pokeAllContainer {
   padding: 0% 15%;
   width: 100%;
@@ -153,7 +186,7 @@ p {
 
 .gameboyExterior {
   background: #ADFF2F;
-  border-radius: 5% 5% 0% 0%;
+  border-radius: 5%;
   padding: 10%;
 }
 
@@ -164,6 +197,8 @@ p {
 }
 
 .gameboyScreen {
+  animation-duration: 10s;
+  animation-iteration-count: 3;
   background-color: #FAFAFA;
 }
 
@@ -173,21 +208,28 @@ p {
   background-position: center;
 }
 
+.pokeName,
+.trainerName {
+  padding: 7.5% 0% 25% 7.5%;
+}
+
+.pokeName p,
 .messageContainer p {
   font-family: 'Press Start 2P', cursive;
+}
+
+.messageContainer p {
   font-size: .7rem;
   color: #FAFAFA;
 }
 
 .messageBorder {
-  background-color: #285068;
   border: 7.5px solid #C8A848;
   border-radius: 10px;
 }
 
 .message.one,
 .message.two {
-  background-color: #285068;
   border-top: 3px solid #FAFAFA;
   border-right: 5px solid #FAFAFA;
   border-bottom: 3px solid #FAFAFA;
@@ -203,14 +245,9 @@ p {
 }
 
 .buttonDisplay i:hover {
-  color: #FFCA05;
+  color: #FFCB05;
   transform: scale(1.5);
   transition: all ease-in-out .5s;
-}
-
-.sprites.top,
-.sprites.bottom {
-  display: flex;
 }
 
 .pokeImg,
@@ -222,10 +259,6 @@ p {
 .trainerName {
   width: 80%;
 }
-
-/* .trainerName h3 {
-  
-} */
 
 .pokeImg {
   padding: 7.5%;
@@ -247,10 +280,6 @@ select,
   width: 50%;
 }
 
-select p {
-  font-size: .7rem;
-}
-
 .message p {
   padding: 7.5% 0% 0%;
   text-align: center;
@@ -265,6 +294,117 @@ select p {
   position: relative;
 }
 
-/* .spritesContainer {
-  display: flex;
-} */
+/* ================================================= */
+/* FOOTER: Styling | START (Name, Source) */
+/* ================================================= */
+footer p {
+  color: #3A5CA8;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 2.5% 0%;
+}
+
+/* ================================================= */
+/* MEDIA: Queries | START 
+(@ 1024px/ 940px/ 768px/ 425px/ 320px) */
+/* ================================================= */
+
+/* BREAKPOINT: DESKTOP LARGE */
+@media (max-width: 1024px) {
+  /* Main */
+  .pokeBattle {
+    height: 100vh;
+  }
+
+  .pokeName,
+  .trainerName {
+    padding-left: 5%;
+  }
+
+  button,
+  .message p {
+    font-size: .6rem;
+  }
+}
+
+/* BREAKPOINT: DESKTOP SMALL */
+@media (max-width: 940px) {
+  /* Main */
+  .pokeAllContainer {
+    padding: 0% 10%;
+  }
+
+  .pokeImg,
+  .trainerImg {
+    width: 60%;
+  }
+}
+
+/* BREAKPOINT: TABLET */
+@media (max-width: 768px) {
+  /* Header */
+  .pokeLogoContainer {
+    width: 100%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form input {
+    text-align: center;
+  }
+
+  form input,
+  .nameSubmit {
+    padding: 2.5%;
+  }
+
+  /* Main */
+  .pokeAllContainer {
+    padding: 0% 5%;
+  }
+
+  .pokeImg,
+  .trainerImg {
+    width: 70%;
+  }
+}
+
+/* BREAKPOINT: MOBILE LARGE */
+@media (max-width: 425px) {
+  /* General */
+  .wrapper {
+    padding: 2%;
+  }
+  /* Main */
+  .pokeBattle {
+    background-color: #ADFF2F;
+  }
+
+  .pokeAllContainer {
+    padding: 0%;
+  }
+
+  .gameboyExterior {
+    padding: 0%;
+  }
+
+  .pokeImg,
+  .trainerImg {
+    width: 70%;
+  }
+
+  /* Footer */
+  .pokeCredits p {
+    text-align: center;
+  }
+}
+
+/* BREAKPOINT: MOBILE SMALL */
+@media (max-width: 320px) {
+  .gameboyInterior {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
