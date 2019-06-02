@@ -1,36 +1,18 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.appLogo {
+  animation: appLogoSpin infinite 20s linear;
+  height: 100vmin;
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes appLogoSpin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 
 /* ================================================= */
@@ -47,21 +29,48 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 /* ================================================= */
 /* GENERAL: Styling | START */
 /* ================================================= */
+
+/* font-family: 'Press Start 2P', cursive; */
+/* font-family: 'Open Sans', sans-serif; */
+
 html {
-	font-family: arial;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 125%;
 	scroll-behavior: smooth;
 }
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 img {
 	display: block;
 	height: auto;
 	max-width: 100%;
 	width: 100%;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .7rem;
+  text-transform: uppercase;
+  transition: all ease-in-out .5s;
+}
+
+input {
+  padding: 2%;
+}
+
+i {
+  transition: all ease-in-out .5s;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .wrapper {
@@ -73,11 +82,15 @@ img {
 }
 
 h3 {
-  padding-left: 10%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: .8rem;
+  margin: 0%;
+  padding: 20% 0% 0% 10%;
   text-transform: uppercase;
 }
 
 p {
+  font-size: .8rem;
   margin: 0%;
 }
 
@@ -95,12 +108,28 @@ p {
   justify-content: center;
 }
 
+.nameSubmit {
+  background-color: #FFCA05;
+  border: transparent;
+  padding: 0% 4%;
+}
+
+.nameSubmit i {
+  font-size: 1.5rem;
+}
+
+.nameSubmit:hover {
+  color: #FFCA05;
+  background-color: #3467B0;
+  transition: all ease-in-out .5s;
+}
+
+
 /* ================================================= */
 /* MAIN: Styling | START (Pokemon Trainer/ Sprite/ Player Options) */
 /* ================================================= */
 .pokeBattle {
   background: #FAFAFA;
-  height: 100vh;
 }
 
 .wrapper.battle {
@@ -109,8 +138,70 @@ p {
 }
 
 .pokeAllContainer {
-  padding: 0% 25%;
+  padding: 0% 15%;
   width: 100%;
+}
+
+.gameboyExterior,
+.gameboyInterior {
+  box-shadow: 5px 5px 25px #000;
+}
+
+.gameboyExterior {
+  background: #ADFF2F;
+  border-radius: 5% 5% 0% 0%;
+  padding: 10%;
+}
+
+.gameboyInterior {
+  background-color: #202020;
+  border-radius: 2.5%;
+  padding: 10% 12% 5% 12%;
+}
+
+.gameboyScreen {
+  background-color: #FAFAFA;
+}
+
+.pokeBackground {
+  background-image: url(./assets/battleGrassTwo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.messageContainer p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .7rem;
+  color: #FAFAFA;
+}
+
+.messageBorder {
+  background-color: #285068;
+  border: 7.5px solid #C8A848;
+  border-radius: 10px;
+}
+
+.message.one,
+.message.two {
+  background-color: #285068;
+  border-top: 3px solid #FAFAFA;
+  border-right: 5px solid #FAFAFA;
+  border-bottom: 3px solid #FAFAFA;
+  border-left: 5px solid #FAFAFA;
+  border-radius: 5px;
+}
+
+.buttonDisplay button {
+  background: transparent;
+  border: transparent;
+  color: #FAFAFA;
+  font-size: 1.5rem;
+}
+
+.buttonDisplay i:hover {
+  color: #FFCA05;
+  transform: scale(1.5);
+  transition: all ease-in-out .5s;
 }
 
 .sprites.top,
@@ -128,8 +219,22 @@ p {
   width: 80%;
 }
 
+/* .trainerName h3 {
+  
+} */
+
 .pokeImg {
   padding: 7.5%;
+}
+
+.selectionContainer {
+  border: 5px solid #706880;
+  border-radius: 10px;
+}
+
+.trainerButton.unlock:hover {
+  background-color: #888888;
+  transition: all ease-in-out .5s;
 }
 
 select,
@@ -142,13 +247,18 @@ select {
   text-align: center;
 }
 
-.messageDisplay p {
+.message p {
   padding: 7.5% 0% 0%;
   text-align: center;
 }
 
 .buttonDisplay {
   text-align: right;
+}
+
+.gameLogo {
+  padding-top: 5%;
+  position: relative;
 }
 
 /* .spritesContainer {

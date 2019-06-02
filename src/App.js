@@ -1,6 +1,7 @@
 // Update to React, { Component }...
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+// import pokeballLoader from './assets/pokeballLoader.png';
 import './App.css';
 import axios from 'axios';
 import Header from './Header.js';
@@ -22,7 +23,7 @@ class App extends Component {
       isHidden: false,
 
       // add on a pre-loaded for user experience
-      // isLoading: false,
+      // isLoading: true,
     };
   }
 
@@ -68,18 +69,15 @@ class App extends Component {
         sprite: pokemonSprite,
         // spriteTwo: is a tester sprite which will be the user's sprite
         spriteTwo: pokemonSpriteTest,
+        // isLoading: false,
       });
-
-      // console.log my friend.
-      // console.log(this.state.pokemon);
-      // console.log(this.state.sprite);
     });
   }
 
   render() {
     return (
       <div className="App">
-
+        {/* {this.state.isLoading ? (<img src={pokeballLoader} className="appLogo" alt="" />) : ()} */}
         {/* IF the state isHidden is true... HIDE the HEADER after the handleClick event. */}
         {this.state.isHidden ? null : 
         (<Header 

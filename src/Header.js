@@ -26,7 +26,7 @@ class Header extends Component {
                 onClick={this.props.onClick}
                 required
               >
-                Go!
+                <i className="fas fa-caret-right"></i>
               </button>
             </div>
           </div>
