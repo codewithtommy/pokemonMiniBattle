@@ -11,7 +11,7 @@ class Main extends Component {
     };
   }
 
-  // on select option... log the user's option so we can call for it later in main.js
+  // if there is a change in selecting a drop down option... update the states and make sure only .messageOne shows up. 
   handleSelect = event => {
     this.setState ({
       optionValue: event.currentTarget.value,
@@ -20,6 +20,7 @@ class Main extends Component {
     });
   };
   
+  // upon clicking on the arrow inside the message... update the states, clear .messageOne and display .messageTwo
   handleClearOne = event => {
     event.preventDefault();
     this.setState ({
@@ -28,6 +29,7 @@ class Main extends Component {
     })
   }
 
+  // upon clicking on the arrow... update the states again, clear .messageTwo
   handleClearTwo = event => {
     event.preventDefault();
     this.setState ({
@@ -35,20 +37,10 @@ class Main extends Component {
     })
   }
 
-  // handleClear = event => {
-  //   event.preventDefault();
-  //   this.setState({
-  //     isMessageOneHidden: false,
-  //     isMessageTwoHidden: true,
-  //   });
-  // }
-
-  // function for reloading page which will be called on the "run" button.
+  // function for reloading page which will be called on the "Run Away" button.
   refreshPage() {
     window.location.reload();
   }
-
-  // const randomResponse = Math.floor(Math.random() * 150);
 
   render() {
     return (
@@ -101,8 +93,10 @@ class Main extends Component {
                       <div className="messageBorder">
                         <div className="message two">
                           <p>
-                            <span className="uppercase">{this.props.pokeName}</span> flinched a
-                            bit from that attack.
+                            <span className="uppercase">
+                              {this.props.pokeName}
+                            </span>{" "}
+                            flinched a bit from that attack.
                           </p>
                           <div className="buttonDisplay">
                             <button onClick={this.handleClearTwo}>
@@ -116,7 +110,13 @@ class Main extends Component {
                     <div className="selectionContainer">
                       <div className="select left">
                         <select name="action" onChange={this.handleSelect}>
-                          <option value="" selected disabled hidden tabIndex="0">
+                          <option
+                            value=""
+                            selected
+                            disabled
+                            hidden
+                            tabIndex="0"
+                          >
                             Fight/ Battle.
                           </option>
                           <option value="Fake PokeBall">PokeBall?</option>

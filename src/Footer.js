@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="wrapper">
-          <p>Tommy 2019. Powered by: RESTFUL PokeAPI.co</p>
+          <p>Tommy 2019. Poke Powered by: RESTFUL PokeAPI.co</p>
         </div>
       </footer>
     )

@@ -61,6 +61,10 @@ input {
   padding: 2%;
 }
 
+select {
+  text-align: center;
+}
+
 i {
   transition: all ease-in-out .5s;
 }
@@ -243,8 +247,8 @@ select,
   width: 50%;
 }
 
-select {
-  text-align: center;
+select p {
+  font-size: .7rem;
 }
 
 .message p {
