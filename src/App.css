@@ -486,6 +486,11 @@ footer p {
     width: 70%;
   }
 
+  .message p,
+  button {
+    font-size: .5rem;
+  }
+
   /* Footer */
   .pokeCredits p {
     text-align: center;
