@@ -13,16 +13,18 @@ class App extends Component {
     // set the default state
     this.state = {
       // create boxes here,  where we can store the data to.
+      // pokemon name
       pokemon: [],
+      // pokemon sprites
       sprite: [],
-      spriteTwo: [],
+      // trainer user inputs
       trainerRecord: '',
       trainerName: '',
+      // is...header or main hidden?
       isHeaderHidden: false,
       isMainHidden: true,
+      // pokemon default level + randomizer
       randomLevel: 1,
-      // add on a pre-loaded for user experience
-      // isLoading: true,
     };
   }
 
@@ -65,15 +67,11 @@ class App extends Component {
       const pokemonName = response.data.species.name;
       // got into the pokeapi, grab the sprites (front), and shove it in the pokemonSprite box.
       const pokemonSprite = response.data.sprites.front_default;
-      // pokeapi test/ placeholder sprite
-      const pokemonSpriteTest = response.data.sprites.back_default;
 
       // update the states after getting your data.
       this.setState({
         pokemon: pokemonName,
         sprite: pokemonSprite,
-        // spriteTwo: is a tester sprite which will be the user's sprite
-        spriteTwo: pokemonSpriteTest,
         randomLevel: level,
       });
     });
@@ -94,12 +92,12 @@ class App extends Component {
           (<Main
           pokeName={this.state.pokemon}
           sprite={this.state.sprite}
-          spriteTwo={this.state.spriteTwo}
           trainerName={this.state.trainerName}
           onChange={this.handleSelect}
           randomLevel={this.state.randomLevel}
           />)
         }
+
         <Footer />
       </div>
     );

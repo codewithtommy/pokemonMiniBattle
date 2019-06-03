@@ -66,9 +66,19 @@ class Main extends Component {
                         <p className="animated fadeInLeft delay-3s">
                           Lv{this.props.randomLevel}
                         </p>
+                        <div className="pokeBarWrapper animated fadeInLeft delay-3s">
+                          <div className="pokeBar">
+                            <div className="hpRightWrapper">
+                              <div className="hpBar color fade-shine">
+                                <span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div className="pokeImg animated fadeInRight delay-3s">
                         <img
+                          className="animated shake delay-5s slow"
                           src={this.props.sprite}
                           alt={this.props.pokeName}
                         />
@@ -82,13 +92,22 @@ class Main extends Component {
                         <h3 className="animated fadeInRight delay-2s">
                           {this.props.trainerName}
                         </h3>
+                        <div className="pokeBarWrapper animated fadeInRight delay-2s">
+                          <div className="pokeBarTwo">
+                            <div className="hpRightWrapper">
+                              <div className="hpBar two color fade-shine">
+                                <span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   {/* Div: this is where the messages will be displayed based on state.*/}
-                  <div className="messageContainer">
+                  <div className="messageContainer animated fadeIn">
                     {this.state.isMessageOneHidden ? null : (
-                      <div className="messageBorder">
+                      <div className="messageBorder animated fadeIn">
                         <div className="message one animated fadeIn">
                           <p>
                             Trainer: "{this.props.trainerName}" chucked a "
@@ -96,24 +115,23 @@ class Main extends Component {
                           </p>
                           <div className="buttonDisplay">
                             <button onClick={this.handleClearOne}>
-                              <i className="fas fa-caret-down" />
+                              <i className="fas fa-caret-down animated infinite flash slower" />
                             </button>
                           </div>
                         </div>
                       </div>
                     )}
                     {this.state.isMessageTwoHidden ? null : (
-                      <div className="messageBorder">
+                      <div className="messageBorder animated fadeIn">
                         <div className="message two animated fadeIn">
                           <p>
                             <span className="uppercase">
                               {this.props.pokeName}
-                            </span>{" "}
-                            flinched a bit from that attack.
+                            </span> took that hit to the face.
                           </p>
                           <div className="buttonDisplay">
                             <button onClick={this.handleClearTwo}>
-                              <i className="fas fa-caret-down" />
+                              <i className="fas fa-caret-down animated infinite flash slower" />
                             </button>
                           </div>
                         </div>
@@ -122,13 +140,16 @@ class Main extends Component {
                     {/* Div: containing all user selections */}
                     <div className="selectionContainer animated fadeIn">
                       <div className="select left">
-                        <select name="action" onChange={this.handleSelect}>
+                        <select
+                          className="animated flash delay-4s" 
+                          name="action" 
+                          onChange={this.handleSelect}
+                          value=''>
                           <option
-                            value=""
-                            selected
                             disabled
                             hidden
-                            tabIndex="0">
+                            tabIndex="0"
+                            value=''>
                             Fight/ Battle.
                           </option>
                           <option value="Fake PokeBall">PokeBall?</option>
@@ -140,8 +161,7 @@ class Main extends Component {
                         <button
                           disabled
                           className="trainerButton"
-                          title="Feature Locked"
-                        >
+                          title="Feature Locked">
                           Pok<span className="lowercase">e</span>mon
                         </button>
                       </div>
@@ -150,16 +170,14 @@ class Main extends Component {
                         <button
                           disabled
                           className="trainerButton"
-                          title="Feature Locked"
-                        >
+                          title="Feature Locked">
                           Bag
                         </button>
                         {/* Note: this button is for clearing/ ending simulator on click. */}
                         <button
                           onClick={this.refreshPage}
                           className="trainerButton unlock"
-                          title="End Simulation"
-                        >
+                          title="End Simulation">
                           Run Away.
                         </button>
                       </div>

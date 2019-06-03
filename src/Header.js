@@ -20,7 +20,7 @@ class Header extends Component {
             <div className="pokeLogoContainer animated fadeIn">
               <img src={pokemonLogoOne} alt="Pokemon Main Logo" />
             </div>
-            <div className="pokeSubmit animated infinite pulse slower">
+            <div className="pokeSubmit animated bounce slower">
               <form
                 tabIndex="0"  
                 onSubmit={this.props.onSubmit}>
@@ -32,7 +32,7 @@ class Header extends Component {
                   type="text"
                   required="required"/>
                 <button
-                  className="nameSubmit animated pulse">
+                  className="nameSubmit">
                   <i className="fas fa-caret-right"></i>
                 </button>
               </form>
