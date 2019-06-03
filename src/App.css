@@ -10,13 +10,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 /* ================================================= */
-/* GENERAL: Styling | START */
+/* GENERAL: Grouped Styling | (For DRYNess) */
 /* ================================================= */
-
-html {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 125%;
-	scroll-behavior: smooth;
+h3,
+button {
+  font-family: 'Press Start 2P', cursive;
 }
 
 h3, 
@@ -25,9 +23,28 @@ p {
   margin: 0%;
 }
 
-h3 {
-  font-family: 'Press Start 2P', cursive;
+h3,
+button {
   text-transform: uppercase;
+}
+
+i,
+button {
+  transition: all ease-in-out .5s;
+}
+
+button,
+select {
+  font-size: .7rem;
+}
+
+/* ================================================= */
+/* GENERAL: Styling | START */
+/* ================================================= */
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 125%;
+	scroll-behavior: smooth;
 }
 
 a {
@@ -39,11 +56,6 @@ a {
 a:hover {
   color: #3A5CA8;
   text-decoration: underline;
-}
-
-button {
-  font-family: 'Press Start 2P', cursive;
-  text-transform: uppercase;
 }
 
 form {
@@ -65,16 +77,6 @@ select {
   text-align: center;
 }
 
-i,
-button {
-  transition: all ease-in-out .5s;
-}
-
-button,
-select {
-  font-size: .7rem;
-}
-
 /* .uppercase + .lowercase are span classes. */
 .uppercase {
   text-transform: uppercase;
@@ -93,7 +95,7 @@ select {
 }
 
 /* ================================================= */
-/* HEADER + MAIN + FOOTER: Similary Styling | START (For more DRYness) */
+/* HEADER + MAIN + FOOTER: Grouped Styling | START (For more DRYness) */
 /* ================================================= */
 .pokeHero,
 .pokeBattle,
@@ -445,7 +447,6 @@ footer p {
     width: 70%;
   }
 
-  /* HP bars */
   .hpRightWrapper {
     width: 80%;
   }
@@ -481,6 +482,7 @@ footer p {
 
 /* BREAKPOINT: MOBILE SMALL */
 @media (max-width: 320px) {
+  /* Main */
   .gameboyInterior {
     padding-left: 2.5%;
     padding-right: 2.5%;

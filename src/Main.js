@@ -22,7 +22,7 @@ class Main extends Component {
     });
   };
   
-  // upon clicking on the arrow inside the message... update the states, clear .messageOne and display .messageTwo
+  // upon clicking on the arrow inside the message... update the states, clear .messageOne and display .messageTwo.
   handleClearOne = event => {
     event.preventDefault();
     this.setState ({
@@ -39,7 +39,7 @@ class Main extends Component {
     })
   }
 
-  // function for reloading page which will be called on the "Run Away" button.
+  // function for reloading page back to home... which will be called on the "Run Away" button.
   refreshPage() {
     window.location.reload();
   }
@@ -127,7 +127,7 @@ class Main extends Component {
                           <p>
                             <span className="uppercase">
                               {this.props.pokeName}
-                            </span> took that hit to the face.
+                            </span> took that hit to the face!
                           </p>
                           <div className="buttonDisplay">
                             <button onClick={this.handleClearTwo}>
