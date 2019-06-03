@@ -54,6 +54,7 @@ class Main extends Component {
             <div className="gameboyExterior animated fadeInLeft ">
               {/* Div: .gameboyInterior is the 2nd layer of the design (black screen) */}
               <div className="gameboyInterior">
+                <i class="fas fa-circle power animated infinite flash slower delay-5s"></i>
                 {/* Div: .gameboyScreen is the 3rd layer of the screen (contains all sprites + titles ) */}
                 {/* + includes the background image that will be placed under .pokeBackground */}
                 <div className="gameboyScreen animated flash fast">

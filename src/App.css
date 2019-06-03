@@ -182,6 +182,14 @@ select {
   padding: 10% 12% 5% 12%;
 }
 
+.power {
+  color: red;
+  left: 12.5%;
+  position: absolute;
+  top: 30%;
+  z-index: 1000;
+}
+
 .gameboyScreen {
   animation-duration: 10s;
   animation-iteration-count: 3;
@@ -469,6 +477,10 @@ footer p {
     padding: 0%;
   }
 
+  .power {
+    left: 2.5%;
+  }
+
   .pokeImg,
   .trainerImg {
     width: 70%;
@@ -486,5 +498,9 @@ footer p {
   .gameboyInterior {
     padding-left: 2.5%;
     padding-right: 2.5%;
+  }
+
+  .power {
+    display: none;
   }
 }
