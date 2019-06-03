@@ -1,6 +1,7 @@
 {
   "name": "pokemon-lulz",
   "version": "0.1.0",
+  "homepage": "https://codewithtommy.github.io/pokemon-lulz/",
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.1",
@@ -33,6 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://github.com/codewithtommy/pokemon-lulz"
+  }
 }
