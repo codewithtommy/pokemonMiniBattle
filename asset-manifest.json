@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pokemon-lulz/static/css/main.796e857d.chunk.css",
-    "main.js": "/pokemon-lulz/static/js/main.553c5101.chunk.js",
-    "main.js.map": "/pokemon-lulz/static/js/main.553c5101.chunk.js.map",
+    "main.css": "/pokemon-lulz/static/css/main.65f11788.chunk.css",
+    "main.js": "/pokemon-lulz/static/js/main.240f157d.chunk.js",
+    "main.js.map": "/pokemon-lulz/static/js/main.240f157d.chunk.js.map",
     "runtime~main.js": "/pokemon-lulz/static/js/runtime~main.22c2298f.js",
     "runtime~main.js.map": "/pokemon-lulz/static/js/runtime~main.22c2298f.js.map",
     "static/js/2.148ba654.chunk.js": "/pokemon-lulz/static/js/2.148ba654.chunk.js",
     "static/js/2.148ba654.chunk.js.map": "/pokemon-lulz/static/js/2.148ba654.chunk.js.map",
     "index.html": "/pokemon-lulz/index.html",
-    "precache-manifest.14fd3e9303a9dcb6a2f671b73ed33520.js": "/pokemon-lulz/precache-manifest.14fd3e9303a9dcb6a2f671b73ed33520.js",
+    "precache-manifest.b54211b6e31ae9f004cfc39df2a5b4af.js": "/pokemon-lulz/precache-manifest.b54211b6e31ae9f004cfc39df2a5b4af.js",
     "service-worker.js": "/pokemon-lulz/service-worker.js",
-    "static/css/main.796e857d.chunk.css.map": "/pokemon-lulz/static/css/main.796e857d.chunk.css.map",
+    "static/css/main.65f11788.chunk.css.map": "/pokemon-lulz/static/css/main.65f11788.chunk.css.map",
     "static/media/App.css": "/pokemon-lulz/static/media/battleGrassTwo.658536bd.jpg",
     "static/media/gameBoyLogoTwo.png": "/pokemon-lulz/static/media/gameBoyLogoTwo.bd1ca2f7.png",
     "static/media/pokemonLogoOne.png": "/pokemon-lulz/static/media/pokemonLogoOne.023d617a.png"

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pokemon-lulz/precache-manifest.14fd3e9303a9dcb6a2f671b73ed33520.js"
+  "/pokemon-lulz/precache-manifest.b54211b6e31ae9f004cfc39df2a5b4af.js"
 );
 
 self.addEventListener('message', (event) => {

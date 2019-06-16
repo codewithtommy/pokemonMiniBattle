@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "37259b6ef59fcf19505d526e2b2ce661",
+    "revision": "da045b402ef0a2313a250bf03b4fcc02",
     "url": "/pokemon-lulz/index.html"
   },
   {
-    "revision": "07a53ec3760f9491080a",
-    "url": "/pokemon-lulz/static/css/main.796e857d.chunk.css"
+    "revision": "9d96ded4bf1da14050e1",
+    "url": "/pokemon-lulz/static/css/main.65f11788.chunk.css"
   },
   {
     "revision": "db810fb88802f4730b4e",
     "url": "/pokemon-lulz/static/js/2.148ba654.chunk.js"
   },
   {
-    "revision": "07a53ec3760f9491080a",
-    "url": "/pokemon-lulz/static/js/main.553c5101.chunk.js"
+    "revision": "9d96ded4bf1da14050e1",
+    "url": "/pokemon-lulz/static/js/main.240f157d.chunk.js"
   },
   {
     "revision": "ff5a782a45b1ee3afdf9",
