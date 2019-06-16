@@ -1,7 +1,7 @@
 {
   "name": "pokemon-lulz",
   "version": "0.1.0",
-  "homepage": "https://codewithtommy.github.io/pokemon-lulz/",
+  "homepage": "https://codewithtommy.github.io/pokemonMiniBattle/",
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.1",
