@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/pokemon-lulz/static/css/main.65f11788.chunk.css",
-    "main.js": "/pokemon-lulz/static/js/main.240f157d.chunk.js",
-    "main.js.map": "/pokemon-lulz/static/js/main.240f157d.chunk.js.map",
-    "runtime~main.js": "/pokemon-lulz/static/js/runtime~main.22c2298f.js",
-    "runtime~main.js.map": "/pokemon-lulz/static/js/runtime~main.22c2298f.js.map",
-    "static/js/2.148ba654.chunk.js": "/pokemon-lulz/static/js/2.148ba654.chunk.js",
-    "static/js/2.148ba654.chunk.js.map": "/pokemon-lulz/static/js/2.148ba654.chunk.js.map",
-    "index.html": "/pokemon-lulz/index.html",
-    "precache-manifest.b54211b6e31ae9f004cfc39df2a5b4af.js": "/pokemon-lulz/precache-manifest.b54211b6e31ae9f004cfc39df2a5b4af.js",
-    "service-worker.js": "/pokemon-lulz/service-worker.js",
-    "static/css/main.65f11788.chunk.css.map": "/pokemon-lulz/static/css/main.65f11788.chunk.css.map",
-    "static/media/App.css": "/pokemon-lulz/static/media/battleGrassTwo.658536bd.jpg",
-    "static/media/gameBoyLogoTwo.png": "/pokemon-lulz/static/media/gameBoyLogoTwo.bd1ca2f7.png",
-    "static/media/pokemonLogoOne.png": "/pokemon-lulz/static/media/pokemonLogoOne.023d617a.png"
+    "main.css": "/pokemonMiniBattle/static/css/main.75bb89d3.chunk.css",
+    "main.js": "/pokemonMiniBattle/static/js/main.8bd92677.chunk.js",
+    "main.js.map": "/pokemonMiniBattle/static/js/main.8bd92677.chunk.js.map",
+    "runtime~main.js": "/pokemonMiniBattle/static/js/runtime~main.f0db44b6.js",
+    "runtime~main.js.map": "/pokemonMiniBattle/static/js/runtime~main.f0db44b6.js.map",
+    "static/js/2.148ba654.chunk.js": "/pokemonMiniBattle/static/js/2.148ba654.chunk.js",
+    "static/js/2.148ba654.chunk.js.map": "/pokemonMiniBattle/static/js/2.148ba654.chunk.js.map",
+    "index.html": "/pokemonMiniBattle/index.html",
+    "precache-manifest.ccf9d188b0cc5f4d30a38bafeca6fd17.js": "/pokemonMiniBattle/precache-manifest.ccf9d188b0cc5f4d30a38bafeca6fd17.js",
+    "service-worker.js": "/pokemonMiniBattle/service-worker.js",
+    "static/css/main.75bb89d3.chunk.css.map": "/pokemonMiniBattle/static/css/main.75bb89d3.chunk.css.map",
+    "static/media/App.css": "/pokemonMiniBattle/static/media/battleGrassTwo.658536bd.jpg",
+    "static/media/gameBoyLogoTwo.png": "/pokemonMiniBattle/static/media/gameBoyLogoTwo.bd1ca2f7.png",
+    "static/media/pokemonLogoOne.png": "/pokemonMiniBattle/static/media/pokemonLogoOne.023d617a.png"
   }
 }
