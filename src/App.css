@@ -38,6 +38,16 @@ select {
   font-size: .7rem;
 }
 
+input:focus + label,
+input:focus,
+button:focus,
+.buttonDisplay button:focus,
+select:focus,
+option:focus  {
+  color: #FFCB05;
+  background-color:  #3A5CA8;
+}
+
 /* ================================================= */
 /* GENERAL: Styling | START */
 /* ================================================= */
@@ -71,6 +81,10 @@ img {
 
 input {
   padding: 2%;
+}
+
+p {
+  color: #404040;
 }
 
 select {
@@ -123,7 +137,7 @@ select {
 /* HEADER: Styling | START (Pokemon Main Logo/ PokeBall logo/ Submit Button) */
 /* ================================================= */
 .pokeHero {
-  height: 100vh;
+  height: 90vh;
 }
 
 .pokeTitle {
@@ -135,13 +149,30 @@ select {
   width: 75%;
 }
 
+.pokeDescription {
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.pokeDescription p {
+  font-size: .7rem;
+  padding: 0% 22%;
+}
+
 .pokeSubmit {
   animation-duration: 5s;
   justify-content: center;
   margin-top: 5%;
 }
 
+.pokeSubmit form {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .7rem;
+}
+
 .nameSubmit {
+  color: #404040;
   background-color: #FFCB05;
   border: transparent;
   padding: 0% 7.5%;
@@ -167,7 +198,7 @@ select {
 
 .gameboyExterior,
 .gameboyInterior {
-  box-shadow: 5px 5px 25px #000;
+  box-shadow: 5px 5px 25px #404040;
 }
 
 .gameboyExterior {
@@ -222,6 +253,11 @@ select {
   color: #FAFAFA;
 }
 
+.battleSelect {
+  animation-iteration-count: 3;
+  animation-delay: 20s;
+}
+
 .messageBorder {
   border: 7.5px solid #C8A848;
   border-radius: 10px;
@@ -239,12 +275,11 @@ select {
 .buttonDisplay button {
   background: transparent;
   border: transparent;
-  color: #FAFAFA;
+  color: #FFCB05;
   font-size: 1.5rem;
 }
 
 .buttonDisplay i:hover {
-  color: #FFCB05;
   transform: scale(1.5);
   transition: all ease-in-out .5s;
 }
@@ -285,7 +320,7 @@ select,
 }
 
 .buttonDisplay {
-  text-align: right;
+  text-align: center;
 }
 
 .gameLogo {
@@ -341,7 +376,7 @@ select,
 	transition: width .4s ease-in-out;
 }
 
-.fade-shine span {
+.fadeShine span {
   border: 1px solid #285068;
   position: relative;
 }
@@ -354,8 +389,8 @@ span {
   0% {opacity: 50; width: 0;}
 }
 
-.fade-shine span::after {
-	animation: animate-fade-shine 5s ease-in-out infinite;
+.fadeShine span::after {
+	animation: animate-fadeShine 5s ease-in-out infinite;
 	background: #B6FED1;
 	content: '';
   opacity: 0;
@@ -366,7 +401,7 @@ span {
   left: 0;
 }
 
-@keyframes animate-fade-shine {
+@keyframes animate-fadeShine {
   0% {opacity: 0; width: 0;}
   50% {opacity: .8;}
   100% {opacity: 0; width: 95%;}
@@ -376,6 +411,8 @@ span {
 /* FOOTER: Styling | START (Name, Source) */
 /* ================================================= */
 footer p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .6rem;
   color: #3A5CA8;
   font-weight: 500;
   letter-spacing: 2px;
@@ -428,8 +465,16 @@ footer p {
 /* BREAKPOINT: TABLET */
 @media (max-width: 768px) {
   /* Header */
+  .pokeHero {
+    height: 100vh;
+  }
+
   .pokeLogoContainer {
     width: 100%;
+  }
+
+  .pokeDescription p {
+    padding: 0% 5%;
   }
 
   form {
@@ -446,8 +491,12 @@ footer p {
   }
 
   /* Main */
+  .wrapper {
+    padding: 0%;
+  }
+
   .pokeAllContainer {
-    padding: 0% 5%;
+    padding: 0% 2.5%;
   }
 
   .pokeImg,
@@ -460,11 +509,25 @@ footer p {
   }
 }
 
+/* Footer */
+footer p {
+  font-size: .5rem;
+}
+
 /* BREAKPOINT: MOBILE LARGE */
 @media (max-width: 425px) {
   /* General */
   .wrapper {
     padding: 2%;
+  }
+
+  /* Header */
+  .pokeDescription {
+    margin: 10% 0% 5%;
+  }
+
+  .pokeDescription p {
+    padding: 0%;
   }
 
   /* Main */

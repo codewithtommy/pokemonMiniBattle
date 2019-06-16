@@ -21,20 +21,25 @@ class Header extends Component {
               {/* insert: pokemon logo here */}
               <img src={pokemonLogoOne} alt="Pokemon Main Logo" />
             </div>
+            <div className="pokeDescription">
+              <p>A semi interactive Pokemon mini-battle emulator to bring back memories of playing Pokemon on the Game Boy.</p>
+            </div>
             {/* input/ button all contained below. */}
             <div className="pokeSubmit animated bounce slower">
               <form
-                onSubmit={this.props.onSubmit}
-                tabIndex="0">
-                <input className="name"
+                onSubmit={this.props.onSubmit}>
+                <input 
+                  className="name"
                   maxLength={this.state.maxLength}
                   minLength={this.state.minLength}
                   onChange={this.props.onChange}
                   placeholder={this.state.trainerPlacehold}
                   required="required"
+                  tabIndex="0"
                   type="text"/>
                 <button
-                  className="nameSubmit">
+                  className="nameSubmit"
+                  tabIndex="0">
                   <i className="fas fa-caret-right"></i>
                 </button>
               </form>

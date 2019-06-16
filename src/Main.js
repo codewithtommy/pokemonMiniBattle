@@ -10,6 +10,7 @@ class Main extends Component {
       optionValue: '',
       isMessageOneHidden: true,
       isMessageTwoHidden: true,
+      randomColor: '',
     };
   }
 
@@ -44,6 +45,16 @@ class Main extends Component {
     window.location.reload();
   }
 
+  // getRandomColor() {
+  //   // game boy color: order berry, grape, kiwi, dandelion, teal
+  //   const gameBoyColor = ['#C71585', '#8A2BE2', '#ADFF2F', '#FFD700', '#00B5CF'];
+  //   const color = gameBoyColor[Math.floor(Math.random() * color.length)];
+
+  //   this.setState ({
+  //     randomColor: color
+  //   })
+  // }
+
   render() {
     return (
       <main className="pokeBattle">
@@ -51,10 +62,10 @@ class Main extends Component {
           {/* Div: another inner wrapper to contain everything in */}
           <div className="pokeAllContainer">
             {/* Div: .gameboyExterior is the 1st layer of the gameboy design (limegreen) */}
-            <div className="gameboyExterior animated fadeInLeft ">
+            <div className="gameboyExterior animated fadeInLeft">
               {/* Div: .gameboyInterior is the 2nd layer of the design (black screen) */}
               <div className="gameboyInterior">
-                <i class="fas fa-circle power animated infinite flash slower delay-5s"></i>
+                <i className="fas fa-circle power animated infinite flash slower delay-5s"></i>
                 {/* Div: .gameboyScreen is the 3rd layer of the screen (contains all sprites + titles ) */}
                 {/* + includes the background image that will be placed under .pokeBackground */}
                 <div className="gameboyScreen animated flash fast">
@@ -70,7 +81,7 @@ class Main extends Component {
                         <div className="pokeBarWrapper animated fadeInLeft delay-3s">
                           <div className="pokeBar">
                             <div className="hpRightWrapper">
-                              <div className="hpBar color fade-shine">
+                              <div className="hpBar color fadeShine">
                                 <span></span>
                               </div>
                             </div>
@@ -96,7 +107,7 @@ class Main extends Component {
                         <div className="pokeBarWrapper animated fadeInRight delay-2s">
                           <div className="pokeBarTwo">
                             <div className="hpRightWrapper">
-                              <div className="hpBar two color fade-shine">
+                              <div className="hpBar two color fadeShine">
                                 <span></span>
                               </div>
                             </div>
@@ -130,7 +141,7 @@ class Main extends Component {
                               {this.props.pokeName}
                             </span> took that hit to the face!
                           </p>
-                          <div className="buttonDisplay">
+                          <div className="buttonDisplay" tabIndex="0">
                             <button onClick={this.handleClearTwo}>
                               <i className="fas fa-caret-down animated infinite flash slower" />
                             </button>
@@ -142,9 +153,10 @@ class Main extends Component {
                     <div className="selectionContainer animated fadeIn">
                       <div className="select left">
                         <select
-                          className="animated flash delay-4s" 
+                          className="battleSelect animated flash slow delay-4s" 
                           name="action" 
                           onChange={this.handleSelect}
+                          tabIndex="0"
                           value=''>
                           <option
                             disabled
@@ -153,10 +165,10 @@ class Main extends Component {
                             value=''>
                             Fight/ Battle.
                           </option>
-                          <option value="Fake PokeBall">PokeBall?</option>
-                          <option value="Garbage Bin">Garbage Bin</option>
-                          <option value="Dirty Burger">Dirty Burger</option>
-                          <option value="Spicy Salmon Roll">Salmon Roll</option>
+                          <option tabIndex="0" value="Fake PokeBall">PokeBall?</option>
+                          <option tabIndex="0" value="Garbage Bin">Garbage Bin</option>
+                          <option tabIndex="0" value="Dirty Burger">Dirty Burger</option>
+                          <option tabIndex="0" value="Spicy Salmon Roll">Salmon Roll</option>
                         </select>
                         {/* Button: Locked for MVP */}
                         <button
@@ -178,6 +190,7 @@ class Main extends Component {
                         <button
                           onClick={this.refreshPage}
                           className="trainerButton unlock"
+                          tabIndex="0"
                           title="End Simulation">
                           Run Away.
                         </button>
