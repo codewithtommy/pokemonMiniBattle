@@ -1,3 +1,13 @@
+# pokemonMiniBattle
+
+Web Development | React Solo Programming
+
+Build with React and animate.css.
+
+A semi interactive Pokemon mini-battle emulator to bring back memories of playing Pokemon on the Game Boy.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
